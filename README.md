@@ -1,2 +1,5 @@
 # miui-fang-
-仿小米官网练习
+
+## 进去可能需要等一会
+
+### https://suntong233.github.io/miui-fang-

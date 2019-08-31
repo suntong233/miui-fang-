@@ -1,0 +1,272 @@
+.home-tool-bar{
+    position: fixed;
+    top: 305px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+}
+.home-tool-item{
+    border: 1px solid #f5f5f5;
+    position: relative;
+    color: #999;
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gouwuche{
+    display: none;
+}
+.saomaBar {
+    display: none;
+    overflow: hidden;
+}
+.home-tool-back{
+    margin-top: 10px;
+}
+.home-tool-bar a{
+    text-decoration: none;
+}
+/* 媒体查询文档宽度小于1283px */
+@media screen and (max-width: 1283px) {
+    .home-tool-item{
+        width: 20px;
+        height: 30px;
+    }
+    .home-tool-item span{
+        position: absolute;
+        right: 30px;
+        border: 1px solid #f5f5f5;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #fff;
+        display: none;
+        padding: 2px 5px;
+        z-index: 2;
+        word-break: keep-all;
+    }
+    .home-tool-item span::after{
+        content: '';
+        display: block;
+        right: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-left: 5px solid #fff;
+        border-top: 5px solid rgba(64, 33, 104,0);
+        border-bottom: 5px solid rgba(64, 33, 104,0);
+        border-right: 5px solid rgba(64, 33, 104,0);
+        position: absolute;
+    }
+    .home-tool-item:hover .arrowRight{
+        right: 21px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-left: 5px solid rgb(255, 255, 255);
+        border-top: 5px solid rgba(64, 33, 104,0);
+        border-bottom: 5px solid rgba(64, 33, 104,0);
+        border-right: 5px solid rgba(64, 33, 104,0);
+        position: absolute;
+    }
+    .home-tool-item:hover .saomaBar {
+        display: flex;
+        position: absolute;
+        right: 30px;
+        border: 1px solid #f5f5f5;
+        top: 0;
+        width: 130px;
+        height: 192px;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+    }
+    .saomaBar img{
+        margin: 20px 0 15px 0;
+    }
+    .home-tool-item:hover .gouwuche{
+        display: inline-block;
+        position: absolute;
+        right: 30px;
+        border: 1px solid #f5f5f5;
+        top: 50%;
+        width: 90px;
+        height: 24px;
+        transform: translateY(-50%);
+        background-color: #fff;
+        text-align: center;
+        line-height: 24px;
+    }
+    .home-tool-item .gouwuche::after{
+        content: '';
+        display: block;
+        right: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-left: 5px solid #fff;
+        border-top: 5px solid rgba(64, 33, 104,0);
+        border-bottom: 5px solid rgba(64, 33, 104,0);
+        border-right: 5px solid rgba(64, 33, 104,0);
+        position: absolute;
+    }
+    .home-tool-item:hover span{
+        display: block;
+    }
+    .home-tool-item:hover .hiddenSpan{
+        display: none;
+    }
+    .home-tool-item:hover .unhover-img{
+        display: none;
+    }
+    .home-tool-item:hover .hover-img{
+        display: block;
+        width: 20px;
+    }
+    .home-tool-item .unhover-img{
+        display: block;
+        width: 20px;
+    }
+    .home-tool-item .hover-img{
+        display: none;
+    }
+    .home-tool-bar{
+        position: fixed;
+        right: 0;
+        left: auto;
+        top: 636px;
+    }
+}
+/* 媒体查询文档宽度小于1458px */
+@media screen and (max-width: 1458px) and (min-width: 1283px) {
+    .home-tool-item{
+        width: 24px;
+        height: 36px;
+    }
+    .home-tool-item span{
+        position: absolute;
+        right: 30px;
+        border: 1px solid #f5f5f5;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #fff;
+        display: none;
+        padding: 2px 5px;
+        z-index: 2;
+        word-break: keep-all;
+    }
+    .home-tool-item span::after{
+        content: '';
+        display: block;
+        right: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-left: 5px solid #fff;
+        border-top: 5px solid rgba(64, 33, 104,0);
+        border-bottom: 5px solid rgba(64, 33, 104,0);
+        border-right: 5px solid rgba(64, 33, 104,0);
+        position: absolute;
+    }
+    .home-tool-item:hover .arrowRight{
+        right: 21px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-left: 5px solid rgb(255, 255, 255);
+        border-top: 5px solid rgba(64, 33, 104,0);
+        border-bottom: 5px solid rgba(64, 33, 104,0);
+        border-right: 5px solid rgba(64, 33, 104,0);
+        position: absolute;
+    }
+    .home-tool-item:hover .saomaBar {
+        display: flex;
+        position: absolute;
+        right: 30px;
+        border: 1px solid #f5f5f5;
+        top: 0;
+        width: 130px;
+        height: 192px;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+    }
+    .saomaBar img{
+        margin: 20px 0 15px 0;
+    }
+    .home-tool-item:hover .gouwuche{
+        display: inline-block;
+        position: absolute;
+        right: 30px;
+        border: 1px solid #f5f5f5;
+        top: 50%;
+        width: 90px;
+        height: 24px;
+        transform: translateY(-50%);
+        background-color: #fff;
+        text-align: center;
+        line-height: 24px;
+    }
+    .home-tool-item .gouwuche::after{
+        content: '';
+        display: block;
+        right: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-left: 5px solid #fff;
+        border-top: 5px solid rgba(64, 33, 104,0);
+        border-bottom: 5px solid rgba(64, 33, 104,0);
+        border-right: 5px solid rgba(64, 33, 104,0);
+        position: absolute;
+    }
+    .home-tool-item:hover span{
+        display: block;
+    }
+    .home-tool-item:hover .hiddenSpan{
+        display: none;
+    }
+    .home-tool-item:hover .unhover-img{
+        display: none;
+    }
+    .home-tool-item:hover .hover-img{
+        display: block;
+        width: 20px;
+    }
+    .home-tool-item .unhover-img{
+        display: block;
+        width: 20px;
+    }
+    .home-tool-item .hover-img{
+        display: none;
+    }
+    .home-tool-bar{
+        left: 50%;
+        right: auto;
+        margin-left: 613px;
+        top: 636px;
+    }
+}
+/* 媒体查询文档宽度大于1458px */
+@media screen and (min-width: 1458px) {
+    .home-tool-item{
+        width: 84px;
+        height: 92px;
+    }
+    .home-tool-item:hover span{
+        color: #ff6700;
+    }
+    .home-tool-item:hover .unhover-img{
+        display: none;
+    }
+    .home-tool-item:hover .hover-img{
+        display: block;
+        width: 35px;
+        margin-bottom: 7px;
+    }
+    .home-tool-item .unhover-img{
+        display: block;
+        width: 35px;
+        margin-bottom: 7px;
+    }
+    .home-tool-item .hover-img{
+        display: none;
+    }
+}

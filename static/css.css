@@ -1,0 +1,1467 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+}
+
+.content {
+  width: 1226px;
+  min-width: 1226px;
+  margin: 0 auto;
+}
+
+/* 清除浮动 */
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  float: left;
+}
+
+header {
+  height: 40px;
+  background-color: #333;
+  color: #b0b0b0;
+}
+
+header ul {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+header li {
+  font-size: 12px;
+  line-height: 40px;
+  transform: translateY(1px);
+  position: relative;
+}
+
+header li:first-child span {
+  padding-left: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+header li span {
+  display: inline-block;
+  padding: 0 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+header li span:hover {
+  color: #fff;
+}
+
+header li::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 12px;
+  border-right: 1px solid #393e3e;
+}
+
+header li:last-child:after {
+  content: '';
+  display: none;
+}
+
+li.dowload {
+  position: relative;
+}
+
+li.dowload:hover label {
+  height: 150px;
+  transition: 100ms linear;
+  z-index: 5;
+}
+
+li.dowload label:hover {
+  height: 150px;
+  transition: 100ms linear;
+  z-index: 999;
+}
+
+li.dowload label {
+  position: absolute;
+  cursor: pointer;
+  z-index: 999;
+  height: 0;
+  overflow: hidden;
+  top: 40px;
+  left: 50%;
+  transition: 100ms linear;
+  transform: translateX(-50%);
+  width: 124px;
+  box-shadow: 0 2px 4px #ccc;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  color: #4b4a4a;
+  font-size: 15px;
+  user-select: none;
+}
+
+li.dowload:hover .sanjiao {
+  display: block;
+}
+
+li.dowload .sanjiao {
+  position: absolute;
+  display: none;
+  box-shadow: 0 0 1px rgb(221, 220, 220);
+  background-color: rgb(73, 61, 61);
+  width: 15px;
+  height: 15px;
+  bottom: -10px;
+  left: 24px;
+  background-color: #fff;
+  transform: rotate(45deg);
+}
+
+li.dowload label img {
+  width: 86px;
+  display: block;
+  margin-top: 18px;
+}
+
+.header-right {
+  position: relative;
+  float: right;
+  line-height: 40px;
+  height: 40px;
+}
+
+.header-right ul {
+  list-style: none;
+  transform: translateY(-1px);
+}
+
+header .shoping-car {
+  height: 40px;
+  margin-left: 10px;
+  display: inline-block;
+  font-size: 12px;
+  user-select: none;
+  padding: 0 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 3;
+}
+
+header .shoping-car:hover {
+  background-color: #fff;
+}
+
+header .shoping-car:hover .shoping-car-div {
+  height: 100px;
+  transition: 300ms;
+}
+
+header .shoping-car-div {
+  position: absolute;
+  transition: 100ms;
+  width: 316px;
+  background-color: #fff;
+  box-shadow: 0 3px 3px rgb(223, 222, 222);
+  top: 40px;
+  height: 0px;
+  right: 0;
+  text-align: center;
+  line-height: 100px;
+  overflow: hidden;
+  color: #636161;
+  font-size: 13px;
+}
+
+.shoping-car-font {
+  cursor: pointer;
+}
+
+header .shoping-car:hover .shoping-car-font {
+  color: #ff6700;
+  transition: 300ms;
+  height: 40px;
+}
+
+header .iconfont-cart {
+  font-size: 20px;
+  vertical-align: -3px;
+}
+
+/* ===============mian ====================*/
+.stmain {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stmain-top {
+  height: 100px;
+  width: 1226px;
+  min-width: 1226px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.stmain-top-logo {
+  width: 55px;
+  height: 55px;
+}
+
+.logoa {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #ff6700;
+  overflow: hidden;
+  transition: 200ms linear;
+}
+
+.logoa::before {
+  content: '';
+  display: inline-block;
+  margin-left: -55px;
+  width: 55px;
+  height: 55px;
+  background: url(./images/mi-home.png) no-repeat;
+  opacity: 0;
+  background-color: #ff6700;
+  background-size: cover;
+  transition: 200ms linear;
+}
+
+.logoa::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background: url(./images/mi-logo.png) no-repeat;
+  background-color: #ff6700;
+  background-size: cover;
+  transition: 200ms linear;
+}
+
+.logoa:hover:after {
+  transform: translateX(55px);
+  opacity: 0;
+  transition: 200ms linear;
+}
+
+.logoa:hover::before {
+  transform: translateX(55px);
+  transition: 200ms linear;
+  opacity: 1;
+}
+
+.stmain-top-renderContent {
+  margin-left: 179px;
+  height: 100%;
+}
+
+.stmain-top-renderContent ul {
+  padding: 0;
+  margin: 0;
+}
+
+.stmain-top-renderContent ul li {
+  padding: 0 10px;
+  font-size: 16px;
+  height: 100px;
+  transition: 200ms linear;
+  line-height: 100px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.stmain-top-renderContent ul li:hover {
+  color: #ff6700;
+  transition: 200ms linear;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+.stmain-top-search {
+  position: relative;
+  left: 85px;
+  width: 297px;
+  height: 50px;
+}
+
+.stmain-top-search:hover input {
+  border-top: 1px solid #b0b0b0;
+  border-left: 1px solid #b0b0b0;
+  transition: 100ms linear;
+  border-bottom: 1px solid #b0b0b0;
+}
+
+.stmain-top-search:hover button {
+  border: 1px solid #b0b0b0;
+  transition: 100ms linear;
+}
+
+.stmain-top-searchipt {
+  transition: 100ms linear;
+  position: absolute;
+  top: 0;
+  width: 245px;
+  height: 100%;
+  padding-left: 10px;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.stmain-top-searchbtn {
+  font-size: 26px;
+  color: #999;
+  appearance: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 52px;
+  background-color: transparent;
+  height: 100%;
+  border: 1px solid #ddd;
+  transition: 100ms linear;
+  cursor: pointer;
+}
+
+.stmain-top-searchbtn:hover {
+  color: white;
+  background-color: #ff6700;
+  transition: 100ms linear;
+}
+
+.stmain-top-searchbtn:focus {
+  outline: none;
+}
+
+#renderspan {
+  float: left;
+}
+
+#renderspan:hover:after {
+  display: block;
+}
+
+#renderspan::after {
+  content: '';
+  width: 850px;
+  height: 22px;
+  display: none;
+  z-index: 6;
+  position: absolute;
+  left: 13%;
+  top: 78px;
+}
+
+#renderspan:hover .waitRender {
+  height: 230px;
+  transition: 200ms;
+  border-top: 1px solid rgb(206, 204, 204);
+  box-shadow: 0 2px 3px rgb(202, 201, 201);
+}
+
+.waitRender {
+  top: 100px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  overflow: hidden;
+  border: none;
+  transition: 300ms;
+  z-index: 5;
+}
+
+.waitRender:hover {
+  transition: 200ms;
+  border-top: 1px solid rgb(206, 204, 204);
+  box-shadow: 0 2px 3px rgb(202, 201, 201);
+  height: 230px;
+}
+
+.tempRender {
+  margin: 0 auto;
+  width: 1226px;
+  display: flex;
+  height: 100%;
+}
+
+.tempRender>div {
+  width: 205px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  user-select: none;
+  cursor: pointer;
+  height: 100%;
+}
+
+.tempRenderspan {
+  display: block;
+  width: 1px;
+  margin-top: 35px;
+  background-color: #e0e0e0;
+  height: 100px;
+}
+
+.tempRenderspan:last-child {
+  display: none;
+}
+
+.tempRender>div>img {
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
+
+.tempRenderdiv {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #393e3e;
+}
+
+.tempRenderdiv2 {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #ff6700;
+}
+
+.tempRenderdiv3 {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #393e3e;
+}
+
+.stmain-top-searchSpan {
+  position: absolute;
+  display: inline-block;
+  background-color: #eee;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #757575;
+  cursor: pointer;
+  padding: 1px 3px;
+  font-size: 12px;
+  transition: 200ms linear;
+  z-index: 2;
+}
+
+.stmain-top-searchSpan:first-child {
+  left: 126px;
+}
+
+.stmain-top-searchSpan:nth-child(2) {
+  left: 172px;
+}
+
+.stmain-top-searchSpan:hover {
+  color: #fff;
+  background-color: #ff6700;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+#hdsfjk div {
+  width: 100%;
+  height: 100%;
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #787878;
+  user-select: none;
+}
+
+#hdsfjk div:hover {
+  background-color: #fafafa;
+}
+
+/* =========================轮播图和一些通道====================== */
+.imgChangeAuto {
+  width: 1226px;
+  min-width: 1226px;
+  height: 670px;
+}
+
+/* 图片轮播 */
+.imgChangeAutoBox {
+  width: 100%;
+  position: relative;
+  height: 460px;
+}
+
+.banner-menu {
+  position: absolute;
+  padding: 20px 0;
+  top: 0;
+  left: 0;
+  width: 234px;
+  height: 100%;
+  background-color: rgba(143, 138, 138, 0.5);
+  z-index: 3;
+}
+
+.banner-menu ul {
+  height: 100%;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.banner-menu ul li {
+  float: none;
+  user-select: none;
+  flex: 1;
+  padding: 0 25px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.banner-menu ul li:hover {
+  background-color: #ff6700;
+}
+
+.banner-menu ul i {
+  position: absolute;
+  right: 20px;
+}
+
+.banner-menuMore {
+  position: absolute;
+  left: 234px;
+  top: 0;
+  z-index: 999;
+  color: #333;
+  height: 460px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(143, 138, 138, 0.5);
+  display: none;
+}
+
+.coldiv {
+  height: 100%;
+  width: 248px;
+  display: flex;
+  flex-direction: column;
+}
+
+.coldiv:last-child {
+  display: block;
+}
+
+.coldivlist {
+  height: 76.5px;
+  flex: 1;
+  display: flex;
+  transition: 100ms;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.coldivlist:hover {
+  color: #ff6700;
+  transition: 100ms;
+}
+
+.coldivlist img {
+  margin-left: 20px;
+  width: 40px;
+  margin-right: 12px;
+}
+
+.banner-menu ul:hover .banner-menuMore {
+  z-index: 999;
+  display: flex;
+}
+
+.swiper-slide>img {
+  cursor: pointer;
+  width: 100%;
+}
+
+.swiper-pagination>span {
+  border: 2px solid rgba(102, 82, 99, 0.7);
+  background-color: rgba(154, 161, 173, 0.7);
+  width: 10px;
+  height: 10px;
+}
+
+.swiper-pagination>span:hover {
+  background-color: rgba(202, 209, 219, 0.8);
+  border: 1px solid rgba(102, 82, 99, 0.7);
+  width: 10px;
+  height: 10px;
+}
+
+.imgChangeAutoBox .swiper-button-prev,
+.imgChangeAutoBox .swiper-button-next {
+  z-index: 2;
+  width: 41px;
+  height: 69px;
+  background-image: url('./images/icon-slides.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.imgChangeAutoBox .swiper-button-prev:focus {
+  outline: none;
+}
+
+.imgChangeAutoBox .swiper-button-next:focus {
+  outline: none;
+}
+
+.imgChangeAutoBox .swiper-button-prev {
+  transform: translateX(234px);
+  background-position: -83px 0;
+}
+
+.imgChangeAutoBox .swiper-button-next {
+  background-position: -124px 0;
+}
+
+.imgChangeAutoBox .swiper-button-prev:hover {
+  background-position: 0 0;
+}
+
+.imgChangeAutoBox .swiper-button-next:hover {
+  transform: translateX(1px);
+  background-position: -42px 0;
+}
+
+.imgChangeAutoBox .banner {
+  width: 100%;
+  background-color: #ccc;
+  height: 100%;
+}
+
+/* 其他通道 */
+.imgChangeotherBox {
+  width: 100%;
+  margin-top: 15px;
+  height: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.imgChangeotherBox-left {
+  width: 234px;
+  height: 170px;
+  background-color: #5f5750;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.imgChangeotherBoximg {
+  width: 316px;
+  cursor: pointer;
+}
+
+.imgChangeotherBox-leftCtn {
+  width: 33%;
+  height: 50%;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #bdbbb8;
+  transition: 200ms;
+  cursor: pointer;
+  user-select: none;
+}
+
+.imgChangeotherBox-leftCtn:hover {
+  color: #fff;
+  transition: 200ms;
+}
+
+.imgChangeotherBox-leftCtn:hover>.otherBoxFont1>img {
+  transition: 200ms;
+  opacity: 1;
+}
+
+.imgChangeotherBox-leftCtn::before {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-46%);
+  top: 1px;
+  width: 65px;
+  height: 1px;
+  background-color: #665e57;
+}
+
+.imgChangeotherBox-leftCtn::after {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  left: 3px;
+  height: 65px;
+  background-color: #665e57;
+}
+
+.otherBoxFont1 {
+  overflow: hidden;
+  text-align: center;
+  line-height: 26px;
+  width: 26px;
+  height: 26px;
+  margin-bottom: 5px;
+}
+
+.otherBoxFont2 {
+  font-size: 12px;
+}
+
+.otherBoxFont1 img {
+  width: 26px;
+  transition: 200ms;
+  opacity: 0.5;
+}
+
+/* ==========================主体================= */
+.mainContent {
+  width: 100%;
+  position: relative;
+  background-color: #F5F5F5;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainContentbox1 {
+  margin-top: 3px;
+  width: 1226px;
+  height: 540px;
+  padding-top: 15px;
+  position: relative;
+}
+
+.mainContentbox1 h2 {
+  font-weight: 500;
+  font-size: 22px;
+  color: #333;
+  margin: 0 0 15px 0;
+}
+
+.mainContentbox1 .categrory-1 {
+  height: 340px;
+  position: relative;
+}
+
+.categrory-1 .categrory-title {
+  width: 234px;
+  height: 340px;
+  background-color: #f1eded;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.categrory-1 .time {
+  color: #ef3a3d;
+  font-size: 21px;
+  margin-top: 60px;
+}
+
+.swiperContent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  width: 978px;
+  height: 340px;
+}
+
+.swiperContentBtn {
+  position: absolute;
+  z-index: 5;
+  width: 70px;
+  height: 25px;
+  top: 25px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+}
+.leftarrow{
+  font-size: 16px;
+  color: #b0b0b0;
+}
+.rightarrow{
+  font-size: 16px;
+  color: #b0b0b0;
+}
+.arrowFalse {
+  font-size: 16px;
+  color: #e0e0e0;
+}
+.leftarrow:hover{
+  color: #ff6700;
+}
+.rightarrow:hover{
+  color: #ff6700;
+}
+.leftbtn{
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  line-height: 25px;
+  border-right: 1px solid #e0e0e0;
+  cursor: pointer;
+}
+.rightbtn{
+  height: 100%;
+  line-height: 25px;
+  text-align: center;
+  cursor: pointer;
+  width: 50%;
+}
+.swiperContainer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  display: flex;
+}
+.the4{
+  width: 978px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.swiperContainer-item {
+  height: 100%;
+  width: 234px;
+  cursor: pointer;
+}
+.swiperContainer-item .cMainBoxContentDiv{
+  background-color: #fff;
+  opacity: 0.8;
+}
+.timer {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.categrory-titleimg {
+  margin: 25px 0 30px 0;
+}
+
+.timer span {
+  font-size: 24px;
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  color: #fff;
+  text-align: center;
+  line-height: 46px;
+  background-color: #605751;
+  margin: 0 2px;
+}
+
+.yellow-border {
+  border-top: 1px solid #ffac13;
+}
+
+.green-border {
+  border-top: 1px solid #83c44e;
+}
+
+.blue-border {
+  border-top: 1px solid #2196fe;
+}
+
+.red-border {
+  border-top: 1px solid red;
+}
+
+.deepgreen-border {
+  border-top: 1px solid #00c0a5;
+}
+
+/* 小米闪购======================================== */
+.cMainBox {
+  width: 1226px;
+  margin: 20px;
+  height: 827px;
+  overflow: hidden;
+  position: relative;
+}
+
+.cMainBox2 {
+  width: 1226px;
+  margin: 20px;
+  height: 367px;
+  position: relative;
+}
+
+.cMainBox2-content {
+  width: 100%;
+  height: 285px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cMainBox2-content a {
+  text-decoration: none;
+  color: #333;
+}
+
+.cMainBox2-content>div {
+  width: 296px;
+  height: 100%;
+  background-color: #fff;
+  transition: 200ms linear;
+}
+
+.cMainBox2-content>div:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgb(222, 224, 216);
+  transition: 200ms linear;
+}
+
+.cMainBox2-content-top {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  height: 180px;
+}
+
+.cMainBox2-content-top span {
+  position: absolute;
+  left: 20px;
+  bottom: 13px;
+  width: 32px;
+  height: 20px;
+  box-sizing: content-box;
+  border: 2px solid #fff;
+  color: #fff;
+  transition: 200ms linear;
+  border-radius: 12px;
+  text-align: center;
+  padding-left: 2px;
+}
+
+.cMainBox2-content-top i {
+  font-size: 30px;
+  line-height: 20px;
+}
+
+.cMainBox2-content-top:hover span {
+  background-color: #ff6700;
+  border: 2px solid #ff6700;
+  transition: 200ms linear;
+}
+
+.cMainBox2-content-bottomtitle {
+  height: 45px;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.cMainBox2-content-bottommsg {
+  color: #b7b7c7;
+  height: 22px;
+  font-size: 12px;
+  display: flex;
+  align-items: flex-end;
+  text-align: end;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cMainBoxTitle {
+  width: 100%;
+  height: 58px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cMainBoxTitle-left {
+  font-size: 25px;
+  color: #333;
+}
+
+.cMainBoxTitle-right {
+  width: 92px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+  user-select: none;
+  color: #424242;
+  cursor: pointer;
+  transition: 200ms linear;
+  display: flex;
+  align-items: center;
+}
+
+.cMainBoxTitle-right>i {
+  line-height: 12px;
+  color: #f5f5f5;
+  font-size: 12px;
+  margin-left: 8px;
+  padding: 4px;
+  border-radius: 50%;
+  transform: translateY(-1px);
+  transition: 300ms linear;
+  background-color: #b0b0b0;
+}
+
+.cMainBoxTitle-right:hover {
+  color: #ff6700;
+  transition: 200ms linear;
+}
+
+.cMainBoxTitle-right:hover i {
+  transition: 300ms linear;
+  background-color: #ff6700;
+}
+
+.cMainBoxTitle-right2 {
+  position: relative;
+  display: flex;
+  height: 20px;
+  align-items: center;
+}
+
+.cMainBoxTitle-right2left {
+  font-size: 16px;
+  padding-bottom: 5px;
+  transition: 200ms linear;
+  user-select: none;
+  border-bottom: 2px solid rgba(143, 138, 138, 0);
+  color: #424242;
+  cursor: pointer;
+}
+
+.cMainBoxTitle-right2right {
+  padding-bottom: 5px;
+  font-size: 16px;
+  transition: 200ms linear;
+  color: #424242;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 2px solid rgba(143, 138, 138, 0);
+  margin-left: 26px;
+}
+
+.actived {
+  color: #ff6700;
+  border-bottom: 2px solid #ff6700;
+}
+
+.cMainBoxContent {
+  width: 100%;
+  margin-bottom: 35px;
+  height: 614px;
+  display: flex;
+}
+
+.cMainBoxContent-left {
+  width: 234px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cMainBoxContent-left>img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgb(222, 224, 216);
+  transition: 200ms linear;
+}
+
+.cMainBoxContent-left>img {
+  transition: 200ms linear;
+  width: 100%;
+  cursor: pointer;
+}
+
+.cMainBoxContent-right {
+  width: 978px;
+  height: 100%;
+  margin-left: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.cMainBoxContentDivSmall {
+  width: 234px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cMainBoxContentDivSmall-box {
+  width: 100%;
+  height: 143px;
+  cursor: pointer;
+  transition: 200ms linear;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.cMainBoxContentDivSmall-boxDescript {
+  margin-left: 30px;
+  width: 87px;
+  margin-right: 15px;
+  height: 64px;
+}
+
+.cMainBoxContentDivSmall-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgb(222, 224, 216);
+  transition: 200ms linear;
+}
+
+.cMainBoxContentDiv {
+  width: 234px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: 200ms linear;
+  background-color: #fff;
+}
+
+.swiperContainer-item .cMainBoxContentDiv:hover {
+  transform: translateY(0);
+  box-shadow: 0 0 0 rgb(222, 224, 216, 0);
+}
+
+.cMainBoxContentDiv:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgb(222, 224, 216);
+  transition: 200ms linear;
+}
+
+.cMainBoxContentDivImg {
+  width: 160px;
+  margin-top: 20px;
+}
+
+.cMainBoxContentDivtitle {
+  margin-top: 15px;
+  text-align: center;
+  white-space: nowrap;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cMainBoxContentDivDes {
+  font-size: 12px;
+  color: #b0b0b0;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+/* ================footer================ */
+.footer1 {
+  position: relative;
+}
+
+.footer2 {
+  position: relative;
+  background-color: #fafafa;
+}
+
+.footer1-content {
+  width: 1226px;
+  min-width: 1226px;
+  margin: 0 auto;
+  height: 272px;
+}
+.footer1top {
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer1main {
+  width: 100%;
+  height: 192px;
+  display: flex;
+  align-items: center;
+}
+.footer1mainContent{
+  width: 100%;
+  height: 112px;
+  display: flex;
+}
+.footerContentBox{
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer1mainTel{
+  width: 244px;
+  height: 100%;
+  border-left: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer1mainTelNum{
+  color: #ff6700;
+  margin-bottom: 5px;
+}
+.footer1mainTelDes{
+  margin-bottom: 3px;
+  font-size: 12px;
+  color: #757575;
+}
+.customer-service{
+  width: 118px;
+  height: 28px;
+  font-size: 12px;
+  line-height: 28px;
+  color: #ff6700;
+  border: 1px solid #ff6700;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 15px;
+  box-sizing: content-box;
+  transition: 300ms;
+}
+.customer-service:hover{
+  background-color: #ff6700;
+  transition: 300ms;
+  color: #fff;
+}
+.footerContentTitle{
+  flex: 1;
+}
+.footerContentC{
+  flex: 1;
+  font-size: 12px;
+  color: #757575;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+}
+.footerContentC:hover{
+  color: #ff6700;
+}
+.footer1top-div {
+  border-right: 1px solid #e0e0e0;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  transition: 100ms;
+  font-size: 16px;
+  cursor: pointer;
+}
+.footer1top em {
+  margin-right: 5px;
+}
+.footer1top-div:hover {
+  color: #ff7600;
+  transition: 100ms;
+}
+.footer1top-div:last-child{
+  border: none;
+}
+.footer2-content {
+  width: 122px;
+  margin: 0 auto;
+  height: 232px;
+  min-width: 1226px;
+  padding: 30px 0;
+}
+
+.footer2-info {
+  position: relative;
+  height: 100%;
+}
+
+.miuiLogo {
+  width: 57px;
+  height: 57px;
+  background: #ff6700 url('images/mi-logo.png');
+  background-size: cover;
+  position: absolute;
+}
+
+.footer2-textBox {
+  width: 100%;
+  height: 91px;
+  padding-left: 65px;
+  font-size: 12px;
+  color: #b0b0b0;
+}
+
+.footer2-textBox a {
+  text-decoration: none;
+  color: #b0b0b0;
+}
+
+.footer2-textTop a {
+  position: relative;
+  color: #969494;
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.footer2-textTop a:first-child {
+  padding: 0 5px 0 0;
+}
+
+.footer2-textTop a::after {
+  content: '';
+  height: 70%;
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  right: 0;
+  border-right: 1px solid #b0b0b0;
+}
+
+.footer2-textTop a:last-child::after {
+  border-right: none;
+}
+
+.footer2-textBox a:hover {
+  color: #ff6700;
+}
+
+.footer2-textLinks {
+  height: 32px;
+  padding-left: 65px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.footer2-textLinks>img {
+  height: 27px;
+  cursor: pointer;
+}
+
+.footer2-heikeji {
+  height: 45px;
+  background: url('https://s02.mifile.cn/assets/static/image/slogan2016.png') no-repeat;
+  background-position: center bottom;
+}
+
+.videoMotai{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+.videoMotaiContiner1{
+  width: 880px;
+  background-color: #fff;
+  position: fixed; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 2px;
+}
+.videoMotaiContinerTitle{
+  width: 836px;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+.closeBtn{
+  width: 30px;
+  cursor: pointer;
+  height: 30px;
+  border-radius: 50%;
+  color: #5f5750;
+  transition: 200ms;
+  text-align: center;
+  line-height: 30px;
+  font-size: 30px;
+}
+.closeBtn:hover{
+  background-color: #ff6700;
+  color: #fff;
+  transition: 200ms;
+}
+.videoBox {
+  width: 100%;
+  background-color: rgb(141, 97, 97);
+}
+.videoBox video{
+  width: 100%;
+  height: 100%;
+}
